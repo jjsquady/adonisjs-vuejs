@@ -1,0 +1,21 @@
+@layout('layouts.app')
+
+@section('content')
+
+  @include('todos.create-form')
+  <hr/>
+  <div class="card border-primary">
+    <div class="card-header bg-primary text-light">Tarefas</div>
+    <div class="card-body">
+      @if(todos.length > 0)
+        <ul class="list-group">
+          @each(todo in todos)
+            <li class="list-group-item">{{ todo.body }}</li>
+          @endeach
+        </ul>
+      @else
+        <h3>Não há tarefas salvas. Crie uma!</h3>
+      @endif
+    </div>
+  </div>
+@endsection

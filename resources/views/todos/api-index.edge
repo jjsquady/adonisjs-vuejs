@@ -1,0 +1,13 @@
+@layout('layouts.app')
+
+@section('content')
+
+@include('todos.create-form')
+<hr/>
+<div class="card border-primary">
+  <div class="card-header bg-primary text-light">Tarefas</div>
+  <div class="card-body">
+    <todo-list></todo-list>
+  </div>
+</div>
+@endsection
